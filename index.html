@@ -1,0 +1,326 @@
+<!doctype html>
+<html class="no-js" lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perevedi.online – Переводы с карты на карту</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+  <section class="hero">
+    <header class="header">
+      <div class="row">
+        <div class="large-8 column">
+          <div class="logo">
+            <img src="img/logo.png" alt="Perevedi.online">
+          </div><!-- END LOGO -->
+        </div>
+        <div class="large-4 column">
+          <div class="row">
+            <div class="large-7 large-offset-5 column">
+              <div class="lang-box">
+                <ul class="lang-menu">
+                  <li><a href="#" class="lang active" title="Русский" id="rus">РУС</a></li>
+                  <li><a href="#" class="lang" title="Українська" id="ukr">УКР</a></li>
+                  <li><a href="#" class="lang" title="English" id="eng">ENG</a></li>
+                </ul>
+              </div><!-- END LANG-BOX -->
+            </div>
+          </div>
+          <div class="row" data-magellan>
+            <div class="large-6 column text-right">
+              <a href="#tariff" class="menu-link translate-it" key="tarif">тарифы</a>
+            </div>
+            <div class="large-6 column">
+              <a href="#contact" class="menu-link translate-it" key="contacts">контакты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="two-block_wrapper">
+      <div class="error_block">
+        <div class="row">
+          <div class="large-12 columns">
+            <h2 class="error_block__h2 text-center translate-it" key="error">ОШИБКА <span>500</span></h2>
+            <div class="error_block__h2_desc text-center translate-it" key="insufficient funds on the card">Недостаточно средств на карте</div>
+          </div>
+          <div class="large-2 columns large-centered">
+            <button class="button expanded error-button translate-it" key="cancel">вернуться</button>
+          </div>
+        </div>
+      </div><!-- END ERROR_BLOCK -->
+      <div class="transaction-operation">
+        <div class="row">
+          <div class="large-12 columns">
+            <h2 class="transaction-operation_h2 text-center translate-it" key="send_confirm">перевод</h2>
+            <div class="transaction-operation_desc text-center">
+              <div class="row">
+                <div class="large-12 columns">
+                  <div class="from_to_card">
+                    <span class="translate-it" key="from card_confirm">С карты</span> <span class="from_card">****3456</span> <span class="translate-it" key="to card_confirm">на карту</span> <span class="to_card">****1234</span>
+                  </div>
+                </div>
+                <div class="large-12 columns">
+                  <div class="transaction-total">
+                    <span class="translate-it" key="amount charged_confirm">Сумма списания</span>: <span class="transaction-total_total">6000</span> <sapn class="transaction-total_cur">РУБ</sapn>
+                  </div>
+                </div>
+                <div class="large-12 columns">
+                  <div class="transaction-incrase translate-it" key="enrollment amount_confirm">Сумма зачисления: <span class="transaction-incrase_total">100</span> <span class="transaction-incrase_cur">USD</span></div>
+                </div>
+                <div class="large-12 columns">
+                  <div class="transaction-commision translate-it" key="commission_confirm">Комиссия: <span class="transaction-commision_total">150</span> РУБ</div>
+                </div>
+                <div class="large-6 columns">
+                  <button class="button transaction-button_back translate-it" key="cancel">вернуться</button>
+                </div>
+                <div class="large-6 columns">
+                  <button class="button transaction-button_checkout translate-it" key="send">перевести</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- END TRANSACTION-OPERATION -->
+      <div class="success-operation">
+        <div class="row">
+          <div class="large-12 columns">
+            <h2 class="success-operation_h2 text-center translate-it" key="successful">перевод совершен успешно</h2>
+          </div>
+        </div>
+        <div class="success-operation_button-box text-center">
+          <div class="row">
+            <div class="large-1 large-centered columns">
+              <button class="button expanded success-operation-button">ok</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- END SUCCESS-OPERATION -->
+      <div class="main-block">
+        <div class="row">
+          <div class="large-12 column">
+            <h1 class="main-h1 text-center translate-it" key="send money outside">перевести деньги за пределы россии</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 column">
+            <div class="main-desc text-center translate-it" key="from card to card">с карты на карту?</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-4 large-offset-6 column">
+            <div class="main-desc_scnd text-right translate-it" key="easily">легко!</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-5 column">
+              <div class="card-wrap">
+                <div class="card-wrap_card">
+                  <div class="card-wrap_card_h-wr">
+                      <div class="row">
+                        <div class="large-6 column">
+                          <span class="card-wrap_card__header translate-it" key="sender">Отправитель</span>
+                        </div>
+                        <div class="large-6 column">
+                          <i class="icn-visa"></i>
+                          <i class="icn-master"></i>
+                        </div>
+                      </div>
+                  </div><!-- END CARD-WRAP_CARD_H-WR -->
+                  <form data-abide action="#">
+                    <div class="card-wrap_card_input">
+                      <input type="number" class="card-wrap_card_input__text" placeholder="НОМЕР КАРТЫ" pattern="card">
+                    </div>
+                    <div class="card-wrap_card_data-input">
+                      <div class="card-wrap_card_data-input__m-wrap clearfix">
+                        <div class="card-wrap_card_data-input__m-wrap_item">
+                            <input type="number" min="1" max="12" class="card-wrap_card_data-input__m-wrap_month" placeholder="ММ">
+                        </div>
+                        <div class="card-wrap_card_data-input__m-wrap_item">
+                            <input type="number" min="1" max="99" class="card-wrap_card_data-input__m-wrap_year" placeholder="YY">
+                        </div>
+                        <div class="card-wrap_card_data-input__m-wrap_item__cvv">
+                          <input type="number" min="1" max="999" class="card-wrap_card_data-input__m-wrap_cvv" placeholder="CVV/CVC2" pattern="cvv">
+                        </div>
+                        <div class="about_cvv__wrap">
+                          <a href="#!" class="about_cvv">?</a>
+                          <div class="about_cvv_tooltip">
+                            <p><span class="translate-it" key="tooltip1">Введите 3 последние цифры</span><br /><span class="translate-it" key="tooltip2">на обратной стороне карты</span></p>
+                            <div class="about_cvv_tooltip__card"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </form>
+              </div><!-- END CARD-WRAP -->
+            </div>
+            <div class="large-2 column">
+                <div class="row large-collapse">
+                    <div class="large-12 columns large-expand text-center">
+                        <span class="input-mess translate-it" key="enter transfer amount">Введите сумму перевода</span>
+                    </div>
+                    <div class="large-8 columns">
+                      <div class="transfer-amount_wrap">
+                        <input type="number" class="transfer-amount" min="1" placeholder="0,00" required="required">
+                      </div>
+                    </div>
+                    <div class="large-4 columns">
+                      <div class="cur-select_wrap">
+                        <label>
+                            <select class="cur-select">
+                                <option value="rub">РУБ</option>
+                                <option value="grn">ГРН</option>
+                                <option value="usd">USD</option>
+                            </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="large-12 columns">
+                      <button class="button expanded send-transfer translate-it" key="send">Перевести</button>
+                    </div>
+                </div>
+            </div>
+          <div class="large-5 column">
+              <div class="card-wrap">
+                <div class="card-wrap_card">
+                  <div class="card-wrap_card_h-wr">
+                      <div class="row">
+                        <div class="large-6 column">
+                          <span class="card-wrap_card__header translate-it" key="recipient">Получатель</span>
+                        </div>
+                        <div class="large-6 column">
+                          <i class="icn-visa"></i>
+                          <i class="icn-master"></i>
+                        </div>
+                      </div>
+                  </div><!-- END CARD-WRAP_CARD_H-WR -->
+                  <form data-abide action="#">
+                    <div class="card-wrap_card_input">
+                      <input type="number" class="card-wrap_card_input__text" placeholder="НОМЕР КАРТЫ" pattern="card">
+                    </div>
+                    <div class="card-wrap_card_data__recepient">
+                      <div class="row large-collapse">
+                        <div class="large-6 columns">
+                          <span class="card-wrap_card_data__recepient_header translate-it" key="receipt currency">
+                            Валюта получения
+                          </span>
+                        </div>
+                        <div class="large-2 columns end">
+                          <div class="cur-select_wrap_scnd">
+                            <label>
+                                <select class="cur-select_scnd">
+                                    <option value="rub">РУБ</option>
+                                    <option value="grn">ГРН</option>
+                                    <option value="usd">USD</option>
+                                </select>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </form>
+              </div><!-- END CARD-WRAP -->
+          </div>
+        </div>
+      </div><!-- END MAIN-BLOCK -->
+    </div><!-- END TWO-BLOCK_WRAPPER -->
+  </section>
+  <section class="conditions">
+    <div class="row">
+      <div class="large-12 columns">
+        <h2 class="conditions-h2 translate-it" key="tariffs and conditions" id="tariff" data-magellan-target="tariff">Тарифы и условия</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <h3 class="conditions-h3 translate-it" key="transfers into and outside">Переводы по России и за пределы России</h3>
+      </div>
+      <div class="large-6 columns">
+        <div class="conditions-desc"><span class="translate-it" key="from a debit card">С дебетовой карты — 1,5%, но не менее 39 рублей, которая подлежит уплате в валюте перевода.</span><br /><span class="translate-it" key="from a credit card">С кредитной карты — комиссия определяется банком, выпустившим карту.</span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <h3 class="conditions-h3 translate-it" key="minimum amount">Минимальная сумма одной транзакции</h3>
+      </div>
+      <div class="large-6 columns">
+        <div class="conditions-desc translate-it" key="50 rubles">50 рублей, без учета комиссии</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <h3 class="conditions-h3 translate-it" key="maximum amount">Максимальная сумма одной транзакции</h3>
+      </div>
+      <div class="large-6 columns">
+        <div class="conditions-desc translate-it" key="75000 rubles">75 000 рублей, без учета комиссии.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <h3 class="conditions-h3 translate-it" key="maximum amount of all">Максимальная сумма всех транзакций в сутки</h3>
+      </div>
+      <div class="large-6 columns">
+        <div class="conditions-desc translate-it" key="150000 rubles">150 000 рублей, без учета комиссии.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <h3 class="conditions-h3 translate-it" key="term for crediting">Срок зачисления денег</h3>
+      </div>
+      <div class="large-6 columns">
+        <div class="conditions-desc translate-it" key="can be from a few seconds">Может составлять от нескольких секунд до нескольких дней. Зависит от банка, выпустившего карту получателя..</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <h3 class="conditions-h3 translate-it" key="security">Безопасность</h3>
+      </div>
+      <div class="large-6 columns">
+        <div class="conditions-desc"><span class="translate-it" key="operation is conducted">Операция проводится по технологии 3-D Secure.</span> <i class="icn-master-secure"></i> <i class="icn-visa-secure"></i></div>
+      </div>
+    </div>
+  </section>
+  <section class="contacts"> 
+    <div class="row">
+      <div class="large-12 columns">
+        <h2 class="conditions-h2 translate-it" key="contacts" id="contact" data-magellan-target="contact">Контакты</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <h3 class="conditions-h3 translate-it" key="llc">ООО «ЭсБиСи Технологии»</h3>
+        <p class="translate-it" key="adress">123098, Российская Федерация, г. Москва, ул. Маршала Новикова, д. 1, офис 1307</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="row">
+      <div class="large-12 columns">
+        <span class="copy"><span class="translate-it" key="copyright">копирайт</span>: 2017 © <a href="mailto:info@podmigni.online">podmigni.online</a></span>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/jquery.cookie.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/locale.js"></script>
+    <script src="js/functions.js"></script>
+  </body>
+</html>
