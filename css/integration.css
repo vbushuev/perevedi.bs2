@@ -1,0 +1,32 @@
+#paycontent{
+    position: relative;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+#paycontent #amount-block{
+    position: absolute;
+    top: 60px;
+    left:30px;
+    width:30%;
+    z-index: 100;
+}
+#paycontent #iframeoverlay{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 50;
+    background-color: rgba(0,0,0,.6);
+
+    transition: all .4s ease-in;
+}
+#paycontent iframe{
+    width:100%;
+    height:640px;
+    border: none;
+    overflow: hidden;
+    display: block;
+    z-index: 10;
+}

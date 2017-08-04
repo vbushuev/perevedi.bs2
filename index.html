@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/integration.css">
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -108,135 +109,145 @@
           </div>
         </div>
       </div><!-- END SUCCESS-OPERATION -->
-      <div class="main-block">
-        <div class="row">
-          <div class="large-12 column">
-            <h1 class="main-h1 text-center translate-it" key="send money outside">перевести деньги за пределы россии</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 column">
-            <div class="main-desc text-center translate-it" key="from card to card">с карты на карту?</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 large-offset-6 column">
-            <div class="main-desc_scnd text-right translate-it" key="easily">легко!</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-5 column">
-              <div class="card-wrap">
-                <div class="card-wrap_card">
-                  <div class="card-wrap_card_h-wr">
-                      <div class="row">
-                        <div class="large-6 column">
-                          <span class="card-wrap_card__header translate-it" key="sender">Отправитель</span>
-                        </div>
-                        <div class="large-6 column">
-                          <i class="icn-visa"></i>
-                          <i class="icn-master"></i>
+      <div id="paycontent" class="main-block">
+          <div id="amount-block" class="row">
+              <div class="large-10 column">
+                  <div class="row large-collapse">
+                      <div class="large-12 columns large-expand text-center">
+                          <span class="input-mess translate-it" key="enter transfer amount">Введите сумму перевода</span>
+                      </div>
+                      <div class="large-8 columns">
+                        <div class="transfer-amount_wrap">
+                          <input type="number" class="transfer-amount" min="1" placeholder="0,00" required="required" name="amount">
                         </div>
                       </div>
-                  </div><!-- END CARD-WRAP_CARD_H-WR -->
-                  <form data-abide action="#">
-                    <div class="card-wrap_card_input">
-                      <input type="number" class="card-wrap_card_input__text" placeholder="НОМЕР КАРТЫ" pattern="card">
-                    </div>
-                    <div class="card-wrap_card_data-input">
-                      <div class="card-wrap_card_data-input__m-wrap clearfix">
-                        <div class="card-wrap_card_data-input__m-wrap_item">
-                            <input type="number" min="1" max="12" class="card-wrap_card_data-input__m-wrap_month" placeholder="ММ">
-                        </div>
-                        <div class="card-wrap_card_data-input__m-wrap_item">
-                            <input type="number" min="1" max="99" class="card-wrap_card_data-input__m-wrap_year" placeholder="YY">
-                        </div>
-                        <div class="card-wrap_card_data-input__m-wrap_item__cvv">
-                          <input type="number" min="1" max="999" class="card-wrap_card_data-input__m-wrap_cvv" placeholder="CVV/CVC2" pattern="cvv">
-                        </div>
-                        <div class="about_cvv__wrap">
-                          <a href="#!" class="about_cvv">?</a>
-                          <div class="about_cvv_tooltip">
-                            <p><span class="translate-it" key="tooltip1">Введите 3 последние цифры</span><br /><span class="translate-it" key="tooltip2">на обратной стороне карты</span></p>
-                            <div class="about_cvv_tooltip__card"></div>
-                          </div>
+                      <div class="large-4 columns">
+                        <div class="cur-select_wrap">
+                          <label>
+                              <select class="cur-select" name="currency">
+                                  <option value="RUB">РУБ</option>
+                                  <option value="GRN">ГРН</option>
+                                  <option value="USD">USD</option>
+                              </select>
+                          </label>
                         </div>
                       </div>
-                    </div>
+                      <div class="large-12 columns">
+                        <!-- <button class="button expanded send-transfer translate-it" key="send">Перевести</button> -->
+                        <button class="button expanded send-transfer translate-it" key="send" id="continue">Продолжить</button>
+                      </div>
                   </div>
-                  </form>
-              </div><!-- END CARD-WRAP -->
-            </div>
-            <div class="large-2 column">
-                <div class="row large-collapse">
-                    <div class="large-12 columns large-expand text-center">
-                        <span class="input-mess translate-it" key="enter transfer amount">Введите сумму перевода</span>
-                    </div>
-                    <div class="large-8 columns">
-                      <div class="transfer-amount_wrap">
-                        <input type="number" class="transfer-amount" min="1" placeholder="0,00" required="required">
-                      </div>
-                    </div>
-                    <div class="large-4 columns">
-                      <div class="cur-select_wrap">
-                        <label>
-                            <select class="cur-select">
-                                <option value="rub">РУБ</option>
-                                <option value="grn">ГРН</option>
-                                <option value="usd">USD</option>
-                            </select>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="large-12 columns">
-                      <button class="button expanded send-transfer translate-it" key="send">Перевести</button>
-                    </div>
+              </div>
+          </div>
+          <!-- <iframe src="/templates/form.html"></iframe> -->
+          <div id="iframeoverlay"></div>
+          <div id="fakeform" class="row">
+              <div class="row">
+                <div class="large-10 large-offset-2 column">
+                  <h1 class="main-h1 text-center translate-it" key="send money outside">перевести деньги за пределы россии</h1>
                 </div>
-            </div>
-          <div class="large-5 column">
-              <div class="card-wrap">
-                <div class="card-wrap_card">
-                  <div class="card-wrap_card_h-wr">
-                      <div class="row">
-                        <div class="large-6 column">
-                          <span class="card-wrap_card__header translate-it" key="recipient">Получатель</span>
+              </div>
+              <div class="row">
+                <div class="large-10 large-offset-2 column">
+                  <div class="main-desc text-center translate-it" key="from card to card">с карты на карту?</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-4 large-offset-6 column">
+                  <div class="main-desc_scnd text-right translate-it" key="easily">легко!</div>
+                </div>
+              </div>
+              <div class="large-5 column">
+                  <div class="card-wrap">
+                    <div class="card-wrap_card">
+                      <div class="card-wrap_card_h-wr">
+                          <div class="row">
+                            <div class="large-6 column">
+                              <span class="card-wrap_card__header translate-it" key="sender">Отправитель</span>
+                            </div>
+                            <div class="large-6 column">
+                              <i class="icn-visa"></i>
+                              <i class="icn-master"></i>
+                            </div>
+                          </div>
+                      </div><!-- END CARD-WRAP_CARD_H-WR -->
+                      <form data-abide action="#">
+                        <div class="card-wrap_card_input">
+                          <input type="number" class="card-wrap_card_input__text" placeholder="НОМЕР КАРТЫ" pattern="card"  name="${CARDNO}">
                         </div>
-                        <div class="large-6 column">
-                          <i class="icn-visa"></i>
-                          <i class="icn-master"></i>
-                        </div>
-                      </div>
-                  </div><!-- END CARD-WRAP_CARD_H-WR -->
-                  <form data-abide action="#">
-                    <div class="card-wrap_card_input">
-                      <input type="number" class="card-wrap_card_input__text" placeholder="НОМЕР КАРТЫ" pattern="card">
-                    </div>
-                    <div class="card-wrap_card_data__recepient">
-                      <div class="row large-collapse">
-                        <div class="large-6 columns">
-                          <span class="card-wrap_card_data__recepient_header translate-it" key="receipt currency">
-                            Валюта получения
-                          </span>
-                        </div>
-                        <div class="large-2 columns end">
-                          <div class="cur-select_wrap_scnd">
-                            <label>
-                                <select class="cur-select_scnd">
-                                    <option value="rub">РУБ</option>
-                                    <option value="grn">ГРН</option>
-                                    <option value="usd">USD</option>
-                                </select>
-                            </label>
+                        <div class="card-wrap_card_data-input">
+                          <div class="card-wrap_card_data-input__m-wrap clearfix">
+                            <div class="card-wrap_card_data-input__m-wrap_item">
+                                <input type="number" min="1" max="12" class="card-wrap_card_data-input__m-wrap_month" placeholder="ММ" name="${EXPMONTH}">
+                            </div>
+                            <div class="card-wrap_card_data-input__m-wrap_item">
+                                <input type="number" min="1" max="99" class="card-wrap_card_data-input__m-wrap_year" placeholder="YY" name="${EXPYEAR}">
+                            </div>
+                            <div class="card-wrap_card_data-input__m-wrap_item__cvv">
+                              <input type="number" min="1" max="999" class="card-wrap_card_data-input__m-wrap_cvv" placeholder="CVV/CVC2" pattern="cvv" name="${EXPYEAR}">
+                            </div>
+                            <div class="about_cvv__wrap">
+                              <a href="#!" class="about_cvv">?</a>
+                              <div class="about_cvv_tooltip">
+                                <p><span class="translate-it" key="tooltip1">Введите 3 последние цифры</span><br /><span class="translate-it" key="tooltip2">на обратной стороне карты</span></p>
+                                <div class="about_cvv_tooltip__card"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  </form>
-              </div><!-- END CARD-WRAP -->
+                      </form>
+                  </div><!-- END CARD-WRAP -->
+                </div>
+                <div class="large-2 column">
+
+                </div>
+                <div class="large-2 column"></div>
+              <div class="large-5 column">
+                  <div class="card-wrap">
+                    <div class="card-wrap_card">
+                      <div class="card-wrap_card_h-wr">
+                          <div class="row">
+                            <div class="large-6 column">
+                              <span class="card-wrap_card__header translate-it" key="recipient">Получатель</span>
+                            </div>
+                            <div class="large-6 column">
+                              <i class="icn-visa"></i>
+                              <i class="icn-master"></i>
+                            </div>
+                          </div>
+                      </div><!-- END CARD-WRAP_CARD_H-WR -->
+                      <form data-abide action="#">
+                        <div class="card-wrap_card_input">
+                          <input type="number" class="card-wrap_card_input__text" placeholder="НОМЕР КАРТЫ" pattern="card" name="${DESTINATIONCARDNO}">
+                        </div>
+                        <div class="card-wrap_card_data__recepient">
+                          <div class="row large-collapse">
+                            <div class="large-6 columns">
+                              <span class="card-wrap_card_data__recepient_header translate-it" key="receipt currency">
+                                Валюта получения
+                              </span>
+                            </div>
+                            <div class="large-2 columns end">
+                              <div class="cur-select_wrap_scnd">
+                                <label>
+                                    <select class="cur-select_scnd">
+                                        <option value="rub">РУБ</option>
+                                        <option value="grn">ГРН</option>
+                                        <option value="usd">USD</option>
+                                    </select>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                  </div><!-- END CARD-WRAP -->
+              </div>
+            </div>
           </div>
-        </div>
-      </div><!-- END MAIN-BLOCK -->
+
     </div><!-- END TWO-BLOCK_WRAPPER -->
   </section>
   <section class="conditions">
@@ -294,7 +305,7 @@
       </div>
     </div>
   </section>
-  <section class="contacts"> 
+  <section class="contacts">
     <div class="row">
       <div class="large-12 columns">
         <h2 class="conditions-h2 translate-it" key="contacts" id="contact" data-magellan-target="contact">Контакты</h2>
@@ -322,5 +333,6 @@
     <script src="js/app.js"></script>
     <script src="js/locale.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/integration.js"></script>
   </body>
 </html>

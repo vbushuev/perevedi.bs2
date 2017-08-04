@@ -1,0 +1,13 @@
+<Files ".config">
+    Order Allow,Deny
+    Deny from all
+</Files>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)$ $1.php [L]
+    
+</IfModule>
