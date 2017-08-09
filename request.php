@@ -13,6 +13,8 @@ $rq = Transaction::register([
     "client_ip"=>$_SERVER["REMOTE_ADDR"],
     "status"=>"0"
 ]);
+// $ssn = "1490";//10001100 - 10001492
+$ssn = "10001".rand(100,492);
 $saleData = [
     "data"=>[
         "client_orderid" => $rq->id,
@@ -31,7 +33,7 @@ $saleData = [
         "amount" => $rq->amount,
         "currency" => $rq->currency,
         "email" => "vsb@garan24.ru",
-        "ssn" => "1490",
+        "ssn" => $ssn,
         "ipaddress" => $rq->client_ip,
         "site_url" => $host,
         "redirect_url" => $host."/response",
