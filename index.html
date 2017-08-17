@@ -111,20 +111,41 @@
       </div><!-- END SUCCESS-OPERATION -->
       <div id="paycontent" class="main-block">
           <div id="amount-block" class="row">
+              <input type="hidden" class="transfer-amount" min="1" placeholder="0,00" required="required" name="amount">
               <div class="large-10 column">
                   <div class="row large-collapse">
-                      <div class="large-12 columns large-expand text-center">
+                      <div class="large-6 columns large-expand text-center">
                           <span class="input-mess translate-it" key="enter transfer amount">Введите сумму перевода</span>
                       </div>
-                      <div class="large-8 columns">
+                      <div class="large-6 columns large-expand text-center">
+                          <span class="input-mess translate-it" key="enter recieve amount">Введите сумму получения</span>
+                      </div>
+                      <div class="large-3 large-offset-1 columns">
                         <div class="transfer-amount_wrap">
-                          <input type="number" class="transfer-amount" min="1" placeholder="0,00" required="required" name="amount">
+                          <input type="number" class="transfer-amount-from" min="1" placeholder="0,00" name="amount" required="required">
                         </div>
                       </div>
-                      <div class="large-4 columns">
+                      <div class="large-2 columns">
                         <div class="cur-select_wrap">
                           <label>
-                              <select class="cur-select" name="currency">
+                              <select class="cur-select" name="currency" >
+                                  <option value="RUB">РУБ</option>
+                                  <!-- <option value="GRN">ГРН</option>
+                                  <option value="USD">USD</option> -->
+                              </select>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="large-3 large-offset-1 columns">
+                        <div class="transfer-amount_wrap">
+                          <input type="number" class="transfer-amount-to" min="1" placeholder="0,00" required="required">
+                        </div>
+                      </div>
+                      <div class="large-2 columns">
+                        <div class="cur-select_wrap">
+                          <label>
+                              <select class="cur-select" name="currencyto">
                                   <option value="RUB">РУБ</option>
                                   <option value="GRN">ГРН</option>
                                   <option value="USD">USD</option>
@@ -132,7 +153,10 @@
                           </label>
                         </div>
                       </div>
-                      <div class="large-12 columns">
+                        <div class="large-5 large-offset-1 columns">
+                            <div class="fee"></div>
+                        </div>
+                      <div class="large-6 columns">
                         <!-- <button class="button expanded send-transfer translate-it" key="send">Перевести</button> -->
                         <button class="button expanded send-transfer translate-it" key="send" id="continue">Продолжить</button>
                       </div>

@@ -8,8 +8,16 @@
     position: absolute;
     top: 60px;
     left:30px;
-    width:30%;
+    width:100%;
     z-index: 100;
+}
+#paycontent #amount-block .fee{
+    color: rgba(255,255,255,1);
+    font-size: 16px;
+    font-weight: 400;
+}
+#paycontent #amount-block .fee p{
+    margin: 0;
 }
 #paycontent #iframeoverlay{
     position: absolute;
@@ -19,7 +27,7 @@
     left:0;
     z-index: 50;
     background-color: rgba(0,0,0,.6);
-
+    filter: blur(10px);
     transition: all .4s ease-in;
 }
 #paycontent iframe{
@@ -29,4 +37,7 @@
     overflow: hidden;
     display: block;
     z-index: 10;
+}
+#fakeform{
+    filter: blur(6px);
 }
